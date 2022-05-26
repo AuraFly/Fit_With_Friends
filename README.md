@@ -27,16 +27,16 @@ Project 2 - Team 8
   Utilizes node and MySQL for database storage.
   NPM packeges used:
 
-  - [bcrypt 5.0.1](https://www.npmjs.com/package/bcrypt)
-  - [colors 1.4.0](https://www.npmjs.com/package/colors)
-  - [connect-session-sequelize 7.1.3](https://www.npmjs.com/package/connect-session-sequelize)
-  - [dotenv 16.0.1](https://www.npmjs.com/package/dotenv)
-  - [express 4.18.1](https://expressjs.com/)
-  - [express-handlebars 6.0.6](https://www.npmjs.com/package/express-handlebars)
-  - [express-session 1.17.3](https://www.npmjs.com/package/express-session)
-  - [mysql2 2.3.3](https://www.npmjs.com/package/mysql2)
-  - [sequelize 6.19.2](https://sequelize.org/docs/v6/getting-started/)
-  - [sql-template-strings 2.2.2](https://www.npmjs.com/package/sql-template-strings)
+[bcrypt 5.0.1](https://www.npmjs.com/package/bcrypt)
+[colors 1.4.0](https://www.npmjs.com/package/colors)
+[connect-session-sequelize 7.1.3](https://www.npmjs.com/package/connect-session-sequelize)
+[dotenv 16.0.1](https://www.npmjs.com/package/dotenv)
+[express 4.18.1](https://expressjs.com/)
+[express-handlebars 6.0.6](https://www.npmjs.com/package/express-handlebars)
+[express-session 1.17.3](https://www.npmjs.com/package/express-session)
+[mysql2 2.3.3](https://www.npmjs.com/package/mysql2)
+[sequelize 6.19.2](https://sequelize.org/docs/v6/getting-started/)
+[sql-template-strings 2.2.2](https://www.npmjs.com/package/sql-template-strings)
 
   # Usage
 
