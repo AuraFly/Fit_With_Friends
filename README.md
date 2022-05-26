@@ -27,16 +27,16 @@ Project 2 - Team 8
   Utilizes node and MySQL for database storage.
   NPM packeges used:
 
--     bcrypt 5.0.1
--     colors 1.4.0
--     connect-session-sequelize 7.1.3
--     dotenv 16.0.1
--     express 4.18.1
--     express-handlebars 6.0.6
--     express-session 1.17.3
--     mysql2 2.3.3
--     sequelize 6.19.2
--     sql-template-strings 2.2.2
+  - [bcrypt 5.0.1](https://www.npmjs.com/package/bcrypt)
+  - [colors 1.4.0](https://www.npmjs.com/package/colors)
+  - [connect-session-sequelize 7.1.3](https://www.npmjs.com/package/connect-session-sequelize)
+  - [dotenv 16.0.1](https://www.npmjs.com/package/dotenv)
+  - [express 4.18.1](https://expressjs.com/)
+  - [express-handlebars 6.0.6](https://www.npmjs.com/package/express-handlebars)
+  - [express-session 1.17.3](https://www.npmjs.com/package/express-session)
+  - [mysql2 2.3.3](https://www.npmjs.com/package/mysql2)
+  - [sequelize 6.19.2](https://sequelize.org/docs/v6/getting-started/)
+  - [sql-template-strings 2.2.2](https://www.npmjs.com/package/sql-template-strings)
 
   # Usage
 
@@ -62,7 +62,7 @@ Project 2 - Team 8
 
   This application is covered under the MIT open source license.
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
