@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Swimming",
+    "description": "Vigourous effort, fresstyle swimming",
+    "activity_type": "Aerobic",
+    "calories_bpm": 18
+  },
+  {
+    "name": "Hiking",
+    "description": "Running/Jogging average of 8kph",
+    "activity_type": "Aerobic",
+    "calories_bpm": 14
+  },
+  {
+    "name": "Abdominal Crunches",
+    "description": "3 Sets of 6 with no weight added.",
+    "activity_type": "Strength",
+    "calories_bpm": 9
+  },
+  {
+    "name": "Bent-Knee Sit-Up",
+    "description": "3 Sets of 6 with no weight added.",
+    "activity_type": "Strength",
+    "calories_bpm": 7
+  },
+  {
+    "name": "Standing Hamstring Stretch",
+    "description": "General stretch while standing tall and reaching toward your feet.",
+    "activity_type": "Flexibility",
+    "calories_bpm": 1
+  },
+  {
+    "name": "Butterfly Stretch",
+    "description": "General stretch while sitting with feet pressed solid against each other and pressing knees down to the ground.",
+    "activity_type": "Flexibility",
+    "calories_bpm": 1
+  }
+]
