@@ -1,18 +1,22 @@
 [
   {
-    "user_name": "walker",
-    "id": 1
+    "name": "walker",
+    "email": "placeholder@something.com",
+    "password": "pasword123456"
   },
   {
-    "user_name": "cynthia",
-    "id": 2
+    "name": "cynthia",
+    "email": "placeholder@something.com",
+    "password": "pasword12345"
   },
   {
-    "user_name": "ellen",
-    "id": 3
+    "name": "ellen",
+    "email": "placeholder@something.com",
+    "password": "pasword1234"
   },
   {
-    "user_name": "jordan",
-    "id": 4
+    "name": "jordan",
+    "email": "auraflydev@gmail.com",
+    "password": "pasword123"
   }
 ]
