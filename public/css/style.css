@@ -1,0 +1,45 @@
+body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
+    color: #333333;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*.navbar-------------------------------------------------------------------*/ 
+.navbar {  /* ENTIRE NAVBAR */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-brand { /*LOGO ONLY*/
+    text-decoration: none;
+    font-size: 18px;
+    color: #333333;
+}
+
+.navbar-nav { /*UL CLASS LIST*/
+    list-style: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.navbar-nav { /*UL CLASS LIST*/
+    text-decoration: none;
+    color: blue;
+}
+
+/* li .nav-item { /*UL CLASS TEXT A
+    color: #333333;
+    text-decoration: none;
+  } */
+
+li .nav-item:hover { /*UL CLASS TEXT A HOVER*/
+    text-decoration: none;
+    color: blue;
+}
+
+.highlight { /*HIGHLIGHT COLOR*/
+    color: blue;
+}
+/*end .navbar-------------------------------------------------------------------*/

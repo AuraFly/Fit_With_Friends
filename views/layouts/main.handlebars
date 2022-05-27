@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<title>Fit with Friends</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fit Tracks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=".public\css\style.css">
 </head>
 
 <body>
-    <header>
-    <h1>Fit Tracks</h1>
-    </header>
-    <nav>
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="/home"><span class="highlight">Fit</span> with Friends</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav bg-light">
+            <li class="nav-item"><a href="/home" class="nav-link px-3"><span class="highlight">Home</span></a></li>
+            <li class="nav-item"><a href="/profile" class="nav-link px-3">Set Goals</a></li>
+            <li class="nav-item"><a href="/post" class="nav-link px-3">Post Activities</a></li>
+            <li class="nav-item"><a href="/view" class="nav-link px-3">View Activities</a></li>
+            <li class="nav-item"><a href="/diet" class="nav-link px-3">Healthy Choices</a></li>     
+            <li class="nav-item"><a href="/diet" class="nav-link px-3">Cheat-Day</a></li>
+        </ul>
+    </div> 
+</div>
+</nav>
 
-    </nav>
     <main>
         <div>
             {{{body}}}
@@ -21,4 +36,6 @@
     </main>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
 </html>
