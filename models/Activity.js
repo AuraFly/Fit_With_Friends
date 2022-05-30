@@ -18,14 +18,11 @@ Activity.init(
     description: {
       type: DataTypes.STRING,
     },
-    //used to be date_created
     activity_type: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
-    //used to be needed_funding
-    calories_burned: {
+    calories_bpm: {
       type: DataTypes.SMALLINT,
       allowNull: true,
     },
