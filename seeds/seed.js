@@ -14,7 +14,7 @@ const seedDatabase = async () => {
 
   for (const activity of activityData) {
     await Activity.create({
-      ...Activity,
+      ...activity,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
