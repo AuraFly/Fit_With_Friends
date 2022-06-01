@@ -4,7 +4,6 @@ const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    // Get all activities and JOIN with user data
     const activityData = await Activity.findAll({
       include: [
         {
@@ -14,12 +13,10 @@ router.get("/", async (req, res) => {
       ],
     });
 
-    // Serialize data so the template can read it
     const activities = activityData.map((activity) =>
       activity.get({ plain: true })
     );
 
-    // Pass serialized data and session flag into template
     res.render("homepage", {
       activities,
       logged_in: req.session.logged_in,
@@ -33,10 +30,8 @@ router.get("/activites", (req, res) => {
   res.render("activities");
 });
 
-// Use withAuth middleware to prevent access to route
 router.get("/account", withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
       include: [{ model: Activity }],
@@ -54,7 +49,6 @@ router.get("/account", withAuth, async (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect("/account");
     return;
