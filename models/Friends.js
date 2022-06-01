@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Recs extends Model {}
+class Friends extends Model {}
 
-Recs.init(
+Friends.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,16 +11,16 @@ Recs.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    user1: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    location: {
-      type: DataTypes.TEXT,
+    user2: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
+    friend_status: {
+      type: DataTypes.ENUM("Yes", "No", "Pending"),
       allowNull: false,
     },
     user_id: {
@@ -36,8 +36,8 @@ Recs.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Recs",
+    modelName: "Friends",
   }
 );
 
-module.exports = Recs;
+module.exports = Friends;

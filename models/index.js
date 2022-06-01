@@ -14,4 +14,4 @@ Recs.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-module.exports = { User, Activity };
+module.exports = { User, Activity, Recs };
