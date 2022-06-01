@@ -4,12 +4,12 @@ body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*.navbar-------------------------------------------------------------------*/ 
+/*.navbar--------------------------------------------*/ 
 .navbar {  /* ENTIRE NAVBAR */
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar-brand { /*LOGO ONLY*/
@@ -20,7 +20,7 @@ body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
 
 .navbar-nav { /*UL CLASS LIST*/
     list-style: none;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -29,17 +29,79 @@ body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
     color: blue;
 }
 
-/* li .nav-item { /*UL CLASS TEXT A
-    color: #333333;
-    text-decoration: none;
-  } */
-
-li .nav-item:hover { /*UL CLASS TEXT A HOVER*/
-    text-decoration: none;
-    color: blue;
-}
-
 .highlight { /*HIGHLIGHT COLOR*/
     color: blue;
 }
-/*end .navbar-------------------------------------------------------------------*/
+/*end .navbar-------------------------------------------*/
+
+/*login overlay-----------------------------------------*/
+.img {
+    position: relative;
+    text-align: left;
+}
+
+.overlay-login {
+    position: absolute;
+    top: 25%;
+    bottom: auto;
+    left: 25%;
+    right: 25%;
+    background-color: white;
+    opacity: 65%;
+}
+
+.overlay-login:hover {
+    opacity: 75%;
+}
+
+.overlay-newUser {
+    position: absolute;
+    top: 25%;
+    bottom: auto;
+    left: 25%;
+    right: 25%;
+    background-color: white;
+    opacity: 65%;
+}
+
+.overlay-newUser:hover {
+    opacity: 75%;
+}
+
+/*end login overlay------------------------------------*/
+
+/*PADDING FOR TITLES TO BE UNDER NAVBAR*/
+h1 {
+    margin-top: 53px;
+    margin-bottom: 6px;
+    font-size: 1.5rem;
+    color: black;
+    padding-top: 53px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h2 {
+    margin-bottom: 6px;
+    font-size: 1rem;
+    color: blue;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 12px;
+}
+
+/* FOOTER---------------------------------------------- */
+.footer { /*FOOTER BACKGROUND*/
+    margin-top: 53px;
+    padding: 15px;
+    background-color: gray;
+    text-decoration: none;
+}
+
+.footer li { /*FOOTER TEXT*/
+    list-style: none;
+    color: white;
+    font-size: 14px;
+    text-align: left;
+}
+  /* END FOOTER------------------------------------------ */
