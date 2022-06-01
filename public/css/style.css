@@ -48,10 +48,12 @@ body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
     right: 25%;
     background-color: white;
     opacity: 65%;
+    height: 350px;
+    border-radius: 4px;
 }
 
 .overlay-login:hover {
-    opacity: 75%;
+    opacity: 80%;
 }
 
 .overlay-newUser {
@@ -62,10 +64,12 @@ body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
     right: 25%;
     background-color: white;
     opacity: 65%;
+    height: 350px;
+    border-radius: 4px;
 }
 
 .overlay-newUser:hover {
-    opacity: 75%;
+    opacity: 80%;
 }
 
 /*end login overlay------------------------------------*/
