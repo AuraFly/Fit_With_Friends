@@ -25,11 +25,13 @@
             <li class="nav-item"><a href="/activities" class="nav-link px-3">Activities</a></li>
             <li class="nav-item"><a href="/diet" class="nav-link px-3">Healthy Choices</a></li>     
             <li class="nav-item"><a href="/diet" class="nav-link px-3">Cheat-Day</a></li>
-            <li class="nav-item"><a href="/login" id="logout" class="nav-link px-3">Logout</a></li>
         {{else}}
             <li class="nav-item"><a href="/login" class="nav-link px-3">Login</a></li>
         {{/if}}
         <li class="nav-item"><a href="/about" class="nav-link px-3">About</a></li>
+        {{#if logged_in}}
+        <li class="nav-item"><a href="/login" id="logout" class="nav-link px-3">Logout</a></li>
+        {{/if}}
         </ul>
     </div> 
 </div>
