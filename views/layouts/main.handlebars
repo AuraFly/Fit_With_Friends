@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href=".public\css\style.css">
+    <link rel="stylesheet" href="public\css\style.css">
 </head>
 
 <body>
@@ -18,20 +18,16 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav bg-light">
-
+            
             <li class="nav-item"><a href="/" class="nav-link px-3"><span class="highlight">Home</span></a></li>
-            <li class="nav-item"><a href="/account" class="nav-link px-3">Account</a></li>
-        {{#if logged_in}}
-            <li class="nav-item"><a href="/activities" class="nav-link px-3">Activities</a></li>
-            <li class="nav-item"><a href="/diet" class="nav-link px-3">Healthy Choices</a></li>     
-            <li class="nav-item"><a href="/diet" class="nav-link px-3">Cheat-Day</a></li>
-        {{else}}
+            {{#if logged_in}}
+            <li class="nav-item"><a href="/activities" class="nav-link px-3">Shared Activities/Home2</a></li> 
+            <li class="nav-item"><a href="/account" class="nav-link px-3">User Profile</a></li>
+            {{else}}
             <li class="nav-item"><a href="/login" class="nav-link px-3">Login</a></li>
-        {{/if}}
-        <li class="nav-item"><a href="/about" class="nav-link px-3">About</a></li>
-        {{#if logged_in}}
-        <li class="nav-item"><a href="/login" id="logout" class="nav-link px-3">Logout</a></li>
-        {{/if}}
+            {{/if}}
+            <li class="nav-item"><a href="#" id="logout" class="nav-link px-3">Logout</a></li>
+
         </ul>
     </div> 
 </div>
@@ -44,10 +40,33 @@
     </main>
 </body>
 
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+<div class="footer" id="contact">
+    <div class="container offset-md-1.75">
+    <div class="row">
+
+        <div class="col-lg-6 col-xs-12">
+            <ul class="footer-list">
+                <li><span class="bold">Location</span></li>
+                <li>Denver, Colorado</li>
+                <li>© 2022 All Rights Reserved</li>
+            </ul>
+        </div>
+
+        <div class="col-lg-6 col-xs-12">
+            <ul class="footer-list">
+                <li><span class="bold"></span></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+{{#if logged_in}}
 <script src="/js/logout.js"></script>
+{{/if}}

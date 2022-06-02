@@ -1,15 +1,13 @@
-<h6>THIS IS THE ACTIVIES VIEW</h6>
-
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div>
+  <div class="col-md-4 col-sm-12">
+      <div class="figure">
+        {{!-- DON'T KNOW WHAT TO PUT FOR AN IMAGE --}}
+          <img src="../public/images/lifting.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+      </div>
+  </div>
+  <div class="col-md-6 col-sm-12 ">
+      <h4>activity:{{name}}</h4>
+      <h5>creator:{{user.name}}</h5>
+      <h6>date/time:{{format_date date_created}}</h6>
+          <p class="entry">{{description}}</p>
+  </div>
+  <hr/>
