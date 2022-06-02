@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="..\public\css\style.css">
 </head>
 
 <body>
@@ -35,61 +35,74 @@
 
         <div class="col-md-6 col-sm-12 p-0">
             <div class="img" style="max-width:100%; height:auto;">
-                <img src="images/weights.jpg" alt="weights" class="img-fluid">
+                <img src="../public/images/weights.jpg" alt="weights" class="img-fluid">
 
-                    <div class="overlay-login p-4">
+                    <!-- <div class="overlay-login p-3">
                         <h4>Login</h4>
                             <form class="form login-form ">
-                                <div class="form-group p-2">
+                                <div class="form-group p-1">
                                     <label for="email-login">email:</label>
                                     <br>
                                     <input class="form-input" type="text" id="email-login"/>
                                 </div>
 
-                                <div class="form-group p-2">
+                                <div class="form-group p-1">
                                     <label for="password-login">password:</label>
                                     <br>
                                     <input class="form-input" type="password" id="password-login"/>
                                 </div>
 
-                                <div class="form-group p-2">
+                                <br>
+                                <h4>Welcome Back!!</h4>
+                                <br>
+                                <div class="form-group p-1">
                                     <button class="btn btn-primary login" type="submit">login</button>
                                 </div>
                             </form>
+                    </div> -->
+                    <div class="overlay-welcome p-3">
+                        <h4>Welcome to Fit with Friends!!</h4>
                     </div>
+
+
+
             </div>
         </div>
             
         <div class="col-md-6 col-sm-12 p-0">
             <div class="img" style="max-width:100%; height:auto;">
-                <img src="images/stretch.jpg" alt="stretch" class="img-fluid">
+                <img src="../public/images/stretch.jpg" alt="stretch" class="img-fluid">
 
-                    <div class="overlay-newUser p-4">
+                    <!-- <div class="overlay-newUser p-3">
                         <h4>Create New User</h4>
                             <form class="form create-form ">
 
-                                <div class="form-group p-2">
+                                <div class="form-group p-1">
                                     <label for="username-create">userame:</label>
                                     <br>
                                     <input class="form-input" type="text" id="create" />
                                 </div>
 
-                                <div class="form-group p-2">
+                                <div class="form-group p-1">
                                     <label for="email-create">email:</label>
                                     <br>
                                     <input class="form-input" type="text" id="create" />
                                 </div>
 
-                                <div class="form-group p-2">
+                                <div class="form-group p-1">
                                     <label for="password-create">create password:</label>
                                     <br>
                                     <input class="form-input" type="password" id="password-create" />
                                 </div>
-
+                                <br>
                                 <div class="form-group p-2">
                                     <button class="btn btn-primary create" type="submit">create</button>
                                 </div>
                             </form>
+                    </div> -->
+
+                    <div class="overlay-about p-3">
+                        <h4>Something about the app</h4>
                     </div>
             </div>
         </div>
@@ -106,7 +119,7 @@
 
             <div class="col-md-4 col-sm-12">
                 <div class="figure">
-                    <img src="images/run.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                    <img src="../public/images/run.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                         <h4>activity:</h4>
                         <h5>creator:</h5>
                         <h6>date/time:</h6>
@@ -118,13 +131,16 @@
                                     <br>
                                     <input class="form-input" type="text" id="comment" />
                                 </div>
+                                <div class="form-group p-2 mb-4">
+                                    <button class="btn btn-primary post" type="submit">post</button>
+                                </div>    
                             </form>
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-12">
                 <div class="figure">
-                    <img src="images/bike.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                    <img src="../public/images/bike.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                         <h4>activity:</h4>
                         <h5>creator:</h5>
                         <h6>date/time:</h6>
@@ -136,13 +152,16 @@
                                     <br>
                                     <input class="form-input" type="text" id="comment" />
                                 </div>
+                                <div class="form-group p-2 mb-4">
+                                    <button class="btn btn-primary post" type="submit">post</button>
+                                </div>    
                             </form>
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-12">
                 <div class="figure">
-                    <img src="images/yoga.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                    <img src="../public/images/yoga.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                         <h4>activity:</h4>
                         <h5>creator:</h5>
                         <h6>date/time:</h6>
@@ -154,6 +173,9 @@
                                     <br>
                                     <input class="form-input" type="text" id="comment" />
                                 </div>
+                                <div class="form-group p-2 mb-4">
+                                    <button class="btn btn-primary post" type="submit">post</button>
+                                </div>    
                             </form>
                 </div>
             </div>
@@ -173,7 +195,7 @@
 
                     <div class="col-md-4 col-sm-12">
                         <div class="figure">
-                            <img src="images/lifting.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                            <img src="../public/images/lifting.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                         </div>
                     </div>
 
@@ -187,7 +209,7 @@
                     <hr/>
                     <div class="col-md-4 col-sm-12">
                         <div class="figure">
-                            <img src="images/hike.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                            <img src="../public/images/hike.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                         </div>
                     </div>
 
@@ -202,7 +224,7 @@
 
                     <div class="col-md-4 col-sm-12">
                         <div class="figure">
-                            <img src="images/swim.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                            <img src="../public/images/swim.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                         </div>
                     </div>
 
@@ -216,7 +238,7 @@
                     <hr/>
                     <div class="col-md-4 col-sm-12">
                         <div class="figure">
-                            <img src="images/dance.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                            <img src="../public/images/dance.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                         </div>
                     </div>
 
@@ -256,6 +278,37 @@
                                 <br>
                                 <input class="form-input" type="password" id="activity-details" />
                             </div>
+
+                            <div class="form-group p-2 mb-4">
+                                <button class="btn btn-primary post" type="submit">post activity</button>
+                            </div>
+                        </form>
+
+                        <h4>Search Friends</h4>
+                        <form class="form friend-form ">
+                            <div class="form-group p-2">
+                                <label for="friend">enter friend username:</label>
+                                <br>
+                                <input class="form-input" type="text" id="search" />
+                            </div>
+                            <div class="form-group p-2 mb-4">
+                                <button class="btn btn-primary request" type="submit">request</button>
+                            </div>
+                        </form>
+
+                        <h4>Pending Invites</h4>
+                        <form class="form accept-form ">
+                            <h6>invite #1:</h6>
+                            <div class="form-group p-2 mb-2">
+                                <button class="btn btn-dark accept" type="submit">accept</button>
+                            </div>
+                        </form>
+
+                        <form class="form accept-form ">
+                            <h6>invite #2:</h6>
+                            <div class="form-group p-2 mb-2">
+                                <button class="btn btn-dark accept" type="submit">accept</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -276,7 +329,7 @@
 
                         <div class="col-md-4">
                             <div class="figure">
-                                <img src="images/g-strength.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                                <img src="../public/images/g-strength.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                             </div>
                                 <h5>goal:</h5>
                                 <h6>start date:</h6>
@@ -285,7 +338,7 @@
 
                         <div class="col-md-4">
                             <div class="figure">
-                                <img src="images/g-water.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                                <img src="../public/images/g-water.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                             </div>
                                 <h5>goal:</h5>
                                 <h6>start date:</h6>
@@ -294,7 +347,7 @@
 
                         <div class="col-md-4">
                             <div class="figure">
-                                <img src="images/g-core.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                                <img src="../public/images/g-core.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                             </div>
                                 <h5>goal:</h5>
                                 <h6>start date:</h6>
@@ -303,7 +356,7 @@
 
                         <div class="col-md-4">
                             <div class="figure">
-                                <img src="images/g-diet.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                                <img src="../public/images/g-diet.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                             </div>
                                 <h5>goal:</h5>
                                 <h6>start date:</h6>
@@ -312,7 +365,7 @@
 
                         <div class="col-md-4">
                             <div class="figure">
-                                <img src="images/g-balance.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                                <img src="../public/images/g-balance.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                             </div>
                                 <h5>goal:</h5>
                                 <h6>start date:</h6>
@@ -321,7 +374,7 @@
 
                         <div class="col-md-4">
                             <div class="figure">
-                                <img src="images/g-weight.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                                <img src="../public/images/g-weight.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
                             </div>
                                 <h5>goal:</h5>
                                 <h6>start date:</h6>
@@ -350,6 +403,9 @@
                                     <br>
                                     <input class="form-input" type="password" id="goal-motivation" />
                                 </div>
+                                <div class="form-group p-2 mb-4">
+                                    <button class="btn btn-primary enter" type="submit">enter goal</button>
+                                </div>    
                             </form>
                         </div>
                     </div>
@@ -369,20 +425,20 @@
 
         <div class="col-md-4 col-sm-12">
             <div class="figure">
-                <img src="images/cheesecake.jpg" class="figure-img img-fluid rounded clearfix" alt="Cheesecake" >
+                <img src="../public/images/cheesecake.jpg" class="figure-img img-fluid rounded clearfix" alt="Cheesecake" >
                     <h6>High fat desserts</h6>
             </div>
         </div>
                     <div class="col-md-4 col-sm-12">
                         <div class="figure">
-                            <img src="images/pizza.jpg" class="figure-img img-fluid rounded clearfix" alt="Pizza" >
+                            <img src="../public/images/pizza.jpg" class="figure-img img-fluid rounded clearfix" alt="Pizza" >
                                 <h6>Alternative carbs.</h6>
                             </div>
                         </div>
 
                                 <div class="col-md-4 col-sm-12">
                                     <div class="figure">
-                                        <img src="images/sushi.jpg" class="figure-img img-fluid rounded clearfix" alt="Sushi" >
+                                        <img src="../public/images/sushi.jpg" class="figure-img img-fluid rounded clearfix" alt="Sushi" >
                                             <h6>High protein with carbs.</h6>
                                         </div>
                                     </div>
