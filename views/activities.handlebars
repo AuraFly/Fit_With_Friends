@@ -1,15 +1,33 @@
+<link rel="stylesheet" href="css/style.css" />
 
-  <div class="col-md-4 col-sm-12">
-      <div class="figure">
-        {{!-- DON'T KNOW WHAT TO PUT FOR AN IMAGE --}}
-          <img src="../public/images/lifting.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+<div class="col-md-4 col-sm-12">
+  <div class="figure">
+    {{! DON'T KNOW WHAT TO PUT FOR AN IMAGE }}
+    <img
+      src="../public/images/lifting.jpg"
+      class="figure-img img-fluid rounded clearfix"
+      alt="Yoga"
+    />
+  </div>
+</div>
+<div class="col-md-6 col-sm-12">
+  {{#each activities as |activity|}}
+    <div class="row mb-4 activity">
+      <div class="col-md-5">
+        <h2>
+          <a href="/activity/{{activity.id}}">{{activity.name}}</a>
+        </h2>
+        <div class="strImg">
+          {{{get_strImg activity.activity_type}}}
+        </div>
+
+        <p>Created by {{activity.user.name}}</p>
       </div>
-  </div>
-  <div class="col-md-6 col-sm-12 ">
-      <h4>activity:{{name}}</h4>
-      <h5>creator:{{user.name}}</h5>
-      <h6>date/time:{{format_date date_created}}</h6>
-          <p class="entry">{{description}}</p>
-  </div>
-  <hr/>
-
+      <p>Description:</p>
+      <p>
+        {{activity.description}}
+      </p>
+    </div>
+  {{/each}}
+</div>
+<hr />
