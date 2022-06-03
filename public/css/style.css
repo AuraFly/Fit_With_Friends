@@ -109,3 +109,7 @@ h2 {
     text-align: left;
 }
   /* END FOOTER------------------------------------------ */
+
+.strImg {
+    max-height: 300px;
+}

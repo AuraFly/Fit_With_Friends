@@ -37,7 +37,6 @@ User.init(
     },
     friends: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
   },
   {
