@@ -75,7 +75,7 @@ body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
 .overlay-welcome h4 {
     color: white;
     position: absolute;
-    top: 45%;
+    top: 35%;
     bottom: auto;
     left: 15%;
     right: 15%;
