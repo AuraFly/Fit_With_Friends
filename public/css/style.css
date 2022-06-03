@@ -72,28 +72,48 @@ body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
     opacity: 80%;
 }
 
+/* .overlay-welcome {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: black;
+    opacity: 15%;
+} */
+
 .overlay-welcome h4 {
     color: white;
     position: absolute;
     top: 35%;
     bottom: auto;
-    left: 15%;
-    right: 15%;
+    left: 10%;
+    right: 10%;
     text-transform: uppercase;
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 36px;
+    font-weight: 900;
 }
+
+/* .overlay-about {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: black;
+    opacity: 15%;
+} */
 
 .overlay-about h4 {
     color: white;
     position: absolute;
     top: 35%;
     bottom: auto;
-    left: 15%;
-    right: 15%;
+    left: 18%;
+    right: 18%;
     text-transform: uppercase;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 900;
     list-style: none;
 }
 

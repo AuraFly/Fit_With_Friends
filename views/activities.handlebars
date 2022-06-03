@@ -1,33 +1,96 @@
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/style.css">
 
-<div class="col-md-4 col-sm-12">
-  <div class="figure">
-    {{! DON'T KNOW WHAT TO PUT FOR AN IMAGE }}
-    <img
-      src="../public/images/lifting.jpg"
-      class="figure-img img-fluid rounded clearfix"
-      alt="Yoga"
-    />
-  </div>
-</div>
-<div class="col-md-6 col-sm-12">
-  {{#each activities as |activity|}}
-    <div class="row mb-4 activity">
-      <div class="col-md-5">
-        <h2>
-          <a href="/activity/{{activity.id}}">{{activity.name}}</a>
-        </h2>
-        <div class="strImg">
-          {{{get_strImg activity.activity_type}}}
+<section id="welcome-loggedin">
+    <div class="row">
+
+        <div class="col-md-6 col-sm-12 p-0">
+            <div class="img" style="max-width:100%; height:auto;">
+                <img src="images\weights.jpg" alt="weights" class="img-fluid">
+
+                    <div class="overlay-welcome p-3">
+                        <h4>Welcome to Fit with Friends!!</h4>
+                    </div>
+            </div>
         </div>
+            
+        <div class="col-md-6 col-sm-12 p-0">
+            <div class="img" style="max-width:100%; height:auto;">
+                <img src="images\stretch.jpg" alt="stretch" class="img-fluid">
 
-        <p>Created by {{activity.user.name}}</p>
-      </div>
-      <p>Description:</p>
-      <p>
-        {{activity.description}}
-      </p>
+                    <div class="overlay-about p-3">
+                        <h4>Log your workouts, set your goals, and find friends to help keep you accountable.</h4>
+                    </div>
+            </div>
+        </div>
     </div>
-  {{/each}}
+</section>
+
+<section id="activity">
+  <div class="container">
+    <h1>Shared Activities</h1>
+    <h2>{{name}}, Join your friend's activities</h2>
+      <div class="row">
+
+        {{#if Activities.length}}
+          <div class="col-md-4 col-sm-12 activity-list">
+            <div class="figure" style="max-width:100%; height:auto;">
+              {{#each Activities as |activity|}}
+                <a href="/activity/{{activity.id}}">{{activity.name}}</a>
+                  <div class="strImg">
+                    {{{get_strImg activity.activity_type}}}
+                  </div>
+            </div>
+                  <h4>activity:{{name}}</h4>
+                  <h5>creator:{{activity.user.name}}</h5>
+                  <h6>activity type:{{{activity.activity_type}}}</h6>
+                  <p class="entry">{{activity.description}}</p>
+
+                  <form class="form login-form ">
+                    <div class="form-group p-2">
+                      <label for="comment">comments/join:</label>
+                      <br>
+                      <input class="form-input" type="text" id="comment" />
+                    </div>
+
+                    <div class="form-group p-2 mb-4">
+                      <button class="btn btn-primary post" type="submit">post</button>
+                      <button class="btn btn-sm btn-danger" data-id="{{activity.id}}">Remove this Activity</button>
+                    </div>    
+                  </form>
+          </div>
+      </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</section>
+
+<section id="cheat-day">
+<div class="container">
+    <div class="row">
+        <h1>Cheat-Day</h1>
+        <h2>How to make good choices</h2>
+        <div class="row">
+
+            <div class="col-md-4 col-sm-12">
+                <div class="figure">
+                    <img src="images\cheesecake.jpg" class="figure-img img-fluid rounded clearfix" alt="Cheesecake" >
+                    <h6>High fat desserts</h6>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <div class="figure">
+                    <img src="images\pizza.jpg" class="figure-img img-fluid rounded clearfix" alt="Pizza" >
+                    <h6>Alternative carbs</h6>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <div class="figure">
+                    <img src="images\sushi.jpg" class="figure-img img-fluid rounded clearfix" alt="Sushi" >
+                    <h6>High protein with carbs</h6>
+                </div>
+            </div>
+    </div>
 </div>
-<hr />
+</section>
