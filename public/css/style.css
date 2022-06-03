@@ -42,8 +42,8 @@ body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
 
 .overlay-login {
     position: absolute;
-    top: 25%;
-    bottom: auto;
+    top: 20%;
+    bottom: 25%;
     left: 25%;
     right: 25%;
     background-color: white;
@@ -58,8 +58,8 @@ body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
 
 .overlay-newUser {
     position: absolute;
-    top: 25%;
-    bottom: auto;
+    top: 20%;
+    bottom: 25%;
     left: 25%;
     right: 25%;
     background-color: white;
@@ -70,6 +70,31 @@ body { /* ENTIRE WEBSITE WE CAN CHANGE COLORS & FONT */
 
 .overlay-newUser:hover {
     opacity: 80%;
+}
+
+.overlay-welcome h4 {
+    color: white;
+    position: absolute;
+    top: 45%;
+    bottom: auto;
+    left: 15%;
+    right: 15%;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.overlay-about h4 {
+    color: white;
+    position: absolute;
+    top: 35%;
+    bottom: auto;
+    left: 15%;
+    right: 15%;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    list-style: none;
 }
 
 /*end login overlay------------------------------------*/
@@ -98,13 +123,13 @@ h2 {
 .footer { /*FOOTER BACKGROUND*/
     margin-top: 53px;
     padding: 15px;
-    background-color: gray;
+    background-color: rgb(40, 39, 39);
     text-decoration: none;
 }
 
 .footer li { /*FOOTER TEXT*/
     list-style: none;
-    color: white;
+    color: gray;
     font-size: 14px;
     text-align: left;
 }
