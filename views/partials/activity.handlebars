@@ -1,21 +1,26 @@
 <link rel="stylesheet" href="css/style.css">
 
-{{#if Activities.length}}
-    <div class="col-md-4 col-sm-12 activity-list">
-        <div class="img-fluid">
-            {{#each Activities as |activity|}}
-                <a href="/activity/{{activity.id}}">{{activity.name}}</a>
-                    <div class="strImg">
-                        {{{get_strImg activity.activity_type}}}
-                    </div>
+<div class="col-10">
+    <div class="row">
+        {{#if Activities.length}}
+        <div class="col-md-4 col-sm-12 activity-list">
+            <div class="img-fluid" style="max-width:100%; height:auto;">
+                {{#each Activities as |activity|}}
+                    <a href="/activity/{{activity.id}}">{{activity.name}}</a>
+                        <div class="strImg">
+                            {{{get_strImg activity.activity_type}}}
+                        </div>
+            </div>
         </div>
-    </div>
 
-    <div class="col-md-6 col-sm-12 ">
-        <h4>activity:{{name}}</h4>
+        <div class="col-md-6 col-sm-12 ">
+            <h4>activity:{{name}}</h4>
             <h5>creator:{{activity.user.name}}</h5>
             <h6>activity type:{{{activity.activity_type}}}</h6>
             <p class="entry">{{activity.description}}</p>
             <button class="btn btn-sm btn-danger" data-id="{{activity.id}}">Remove this Activity</button>
-    </div>    
+        </div> 
+        {{/each}} 
+    </div>
+</div>
 <hr/>
