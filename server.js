@@ -1,6 +1,6 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
+// if (process.env.NODE_ENV !== "production") {
+//   require("dotenv").config();
+// }
 
 const path = require("path");
 const express = require("express");
@@ -22,11 +22,12 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: process.env.SESSION_SECRET,
+  secret: "SuperDuperSecretSecret",
   cookie: {},
   resave: false,
   saveUninitialized: true,

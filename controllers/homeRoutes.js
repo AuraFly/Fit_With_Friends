@@ -26,10 +26,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/activites", (req, res) => {
-  res.render("activities");
-});
-
 router.get("/account", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -48,6 +44,30 @@ router.get("/account", withAuth, async (req, res) => {
   }
 });
 
+router.get("/activities", withAuth, async (req, res) => {
+  try {
+    const activityData = await Activity.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+      ],
+    });
+
+    const activities = activityData.map((activity) =>
+      activity.get({ plain: true })
+    );
+
+    res.render("activities", {
+      activities,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/account");
@@ -60,5 +80,6 @@ router.get("/login", (req, res) => {
 router.get("/about", (req, res) => {
   res.render("about");
 });
+
 
 module.exports = router;

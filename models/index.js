@@ -4,6 +4,7 @@ const Recs = require("./Recs");
 
 User.hasMany(Activity, {
   foreignKey: "user_id",
+  onDelete: 'CASCADE'
 });
 
 Activity.belongsTo(User, {
