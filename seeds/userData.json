@@ -2,21 +2,25 @@
   {
     "name": "Walker",
     "email": "walker@something.com",
-    "password": "pasword123456"
+    "password": "pasword123456",
+    "userImage": "default.png"
   },
   {
     "name": "Cynthia",
     "email": "cynthia@something.com",
-    "password": "pasword12345"
+    "password": "pasword12345",
+    "userImage": "default.png"
   },
   {
     "name": "ellen",
     "email": "ellen@something.com",
-    "password": "pasword1234"
+    "password": "pasword1234",
+    "userImage": "default.png"
   },
   {
     "name": "jordan",
     "email": "auraflydev@gmail.com",
-    "password": "pasword123"
+    "password": "pasword123",
+    "userImage": "default.png"
   }
 ]
