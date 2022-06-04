@@ -3,36 +3,36 @@
       "name": "Hiked/Run",
       "description": "miles ran/hiked",
       "goal_type": "stamina",
-      "miles": 5
+      "amount": 5
     },
     {
       "name": "Crunches",
       "description": "number of crunches",
       "goal_type": "core",
-      "crunches": 30
+      "amount": 30
     },
     {
-      "name": "Diet",
+      "name": "Diet goal",
       "description": "stuck with diet",
-      "goal_type": "diet",
-      "length of days": 9
+      "goal_type": "days of diet",
+      "amount": 9
     },
     {
       "name": "Lifting",
       "description": "pounds lifted weight bench",
-      "goal_type": "Strength",
-      "pounds lifted": 25
+      "goal_type": "strength",
+      "amount": 60
     },
     {
-      "name": "Core",
+      "name": "Core work",
       "description": "to do every morning",
-      "goal_type": "strength",
-      "hours per day": 1
+      "goal_type": "core",
+      "amount": 1
     },
     {
       "name": "swim",
       "description": "laps",
       "goal_type": "stamina",
-      "number of laps": 16
+      "amount": 16
     }
   ]

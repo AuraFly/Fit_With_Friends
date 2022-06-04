@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Activity, User } = require("../models");
+const { Activity, Goals, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
       activity.get({ plain: true })
     );
 
-    res.render("homepage", {
+    res.render("account", {
       activities,
       logged_in: req.session.logged_in,
     });
@@ -41,7 +41,7 @@ router.get("/", async (req, res) => {
       goals.get({ plain: true })
     );
 
-    res.render("homepage", {
+    res.render("account", {
       goals,
       logged_in: req.session.logged_in,
     });
@@ -83,7 +83,7 @@ router.get("/activities", withAuth, async (req, res) => {
       activity.get({ plain: true })
     );
 
-    res.render("activities", {
+    res.render("account", {
       activities,
       logged_in: req.session.logged_in,
     });
@@ -107,7 +107,7 @@ router.get("/goals", withAuth, async (req, res) => {
       goals.get({ plain: true })
     );
 
-    res.render("goals", {
+    res.render("account", {
       goals,
       logged_in: req.session.logged_in,
     });
