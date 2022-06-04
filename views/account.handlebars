@@ -1,173 +1,79 @@
-
-<link rel="stylesheet" href="public\css\style.css">
-
-    <h2>{{name}}, here is your account:</h2>
-
-
-  {{#if Activities.length}}
-  <div class="col-md-6 activity-list">
-    <h3>Your Subscribed Activities:</h3>
-
-    {{#each Activities as |activity|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/activity/{{activity.id}}">{{activity.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{activity.id}}">Remove this Activity</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
+<link rel="stylesheet" href="css/style.css"/>
 
 <section id="activity">
     <div class="container">
         <h1>Shared Activities</h1>
-        <h2>Join your friend's activities</h2>
-        <div class="row">
+        <h2>{{name}}, Join your friend's activities</h2>
+            <div class="row">
 
-            <div class="col-md-4 col-sm-12">
-                <div class="figure">
-                    <img src="../public/images/run.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                        <h4>activity:</h4>
-                        <h5>creator:</h5>
-                        <h6>date/time:</h6>
-                            <p class="entry"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque, provident explicabo quis dolor neque laboriosam ullam pariatur fuga in omnis doloremque quidem, minus earum perspiciatis officia expedita ut voluptatem.
-                            </p>
-                            <form class="form login-form ">
-                                <div class="form-group p-2">
-                                    <label for="comment">comments/join:</label>
-                                    <br>
-                                    <input class="form-input" type="text" id="comment" />
-                                </div>
-                                <div class="form-group p-2 mb-4">
-                                    <button class="btn btn-primary post" type="submit">post</button>
-                                </div>    
-                            </form>
+                {{#if Activities.length}}
+                <div class="col-md-4 col-sm-12 activity-list">
+                    <div class="img-fluid">
+                        {{#each Activities as |activity|}}
+                        <a href="/activity/{{activity.id}}">{{activity.name}}</a>
+                            <div class="strImg">
+                                {{{get_strImg activity.activity_type}}}
+                            </div>
+                                <h4>activity:{{name}}</h4>
+                                <h5>creator:{{activity.user.name}}</h5>
+                                <h6>activity type:{{{activity.activity_type}}}</h6>
+                                <p class="entry">{{activity.description}}</p>
+
+                                <form class="form login-form">
+                                    <div class="form-group p-2">
+                                        <label for="comment">comments/join:</label>
+                                        <br>
+                                        <input class="form-input" type="text" id="comment" />
+                                    </div>
+
+                                    <div class="form-group p-2 mb-4">
+                                        <button class="btn btn-primary post" type="submit">post</button>
+                                    </div>    
+                                </form>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-md-4 col-sm-12">
-                <div class="figure">
-                    <img src="../public/images/bike.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                        <h4>activity:</h4>
-                        <h5>creator:</h5>
-                        <h6>date/time:</h6>
-                            <p class="entry"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque, provident explicabo quis dolor neque laboriosam ullam pariatur fuga in omnis doloremque quidem, minus earum perspiciatis officia expedita ut voluptatem.
-                            </p>
-                            <form class="form comment-form ">
-                                <div class="form-group p-2">
-                                    <label for="comment">comments/join:</label>
-                                    <br>
-                                    <input class="form-input" type="text" id="comment" />
-                                </div>
-                                <div class="form-group p-2 mb-4">
-                                    <button class="btn btn-primary post" type="submit">post</button>
-                                </div>    
-                            </form>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-12">
-                <div class="figure">
-                    <img src="../public/images/yoga.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                        <h4>activity:</h4>
-                        <h5>creator:</h5>
-                        <h6>date/time:</h6>
-                            <p class="entry"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque, provident explicabo quis dolor neque laboriosam ullam pariatur fuga in omnis doloremque quidem, minus earum perspiciatis officia expedita ut voluptatem.
-                            </p>
-                            <form class="form comment-form ">
-                                <div class="form-group p-2">
-                                    <label for="comment">comments/join:</label>
-                                    <br>
-                                    <input class="form-input" type="text" id="comment" />
-                                </div>
-                                <div class="form-group p-2 mb-4">
-                                    <button class="btn btn-primary post" type="submit">post</button>
-                                </div>    
-                            </form>
-                </div>
-            </div>
+        {{/each}}
     </div>
+{{/if}}
 </section>
 
-<section id="profile">
+<section id="activity">
     <div class="container">
         <h1>User Profile</h1>
-        <h2>Post Your Activities</h2>
-        <div class="row">
+        <h2>{{name}}, Post your activities</h2>
+            <div class="row">
 
-            <div class="col-10">
-                <div class="row">
+                <div class="col-10">
+                    <div class="row">
 
-{{activities}}
-
-                    {{!-- <div class="col-md-4 col-sm-12">
-                        <div class="figure">
-                            <img src="../public/images/lifting.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
+                        {{#if Activities.length}}
+                        <div class="col-md-4 col-sm-12 activity-list">
+                            <div class="img-fluid">
+                                {{#each Activities as |activity|}}
+                                <a href="/activity/{{activity.id}}">{{activity.name}}</a>
+                                    <div class="strImg">
+                                        {{{get_strImg activity.activity_type}}}
+                                    </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-6 col-sm-12 ">
-                        <h4>activity:</h4>
-                        <h5>creator:</h5>
-                        <h6>date/time:</h6>
-                            <p class="entry"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque, provident explicabo quis dolor neque laboriosam ullam pariatur fuga in omnis doloremque quidem, minus earum perspiciatis officia expedita ut voluptatem.
-                            </p>
-                    </div>
-                    <hr/>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="figure">
-                            <img src="../public/images/hike.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                        </div>
-                    </div>
+                        <div class="col-md-6 col-sm-12 ">
+                            <h4>activity:{{name}}</h4>
+                            <h5>creator:{{activity.user.name}}</h5>
+                            <h6>activity type:{{{activity.activity_type}}}</h6>
+                            <p class="entry">{{activity.description}}</p>
+                            <button class="btn btn-sm btn-danger" data-id="{{activity.id}}">Remove this Activity</button>
+                        </div>    
+                        <hr/>
 
-                    <div class="col-md-6 col-sm-12">
-                        <h4>activity:</h4>
-                        <h5>creator:</h5>
-                        <h6>date/time:</h6>
-                            <p class="entry"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque, provident explicabo quis dolor neque laboriosam ullam pariatur fuga in omnis doloremque quidem, minus earum perspiciatis officia expedita ut voluptatem.
-                            </p>
                     </div>
-                    <hr/>
-
-                    <div class="col-md-4 col-sm-12">
-                        <div class="figure">
-                            <img src="../public/images/swim.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12 ">
-                        <h4>activity:</h4>
-                        <h5>creator:</h5>
-                        <h6>date/time:</h6>
-                            <p class="entry"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque, provident explicabo quis dolor neque laboriosam ullam pariatur fuga in omnis doloremque quidem, minus earum perspiciatis officia expedita ut voluptatem.
-                            </p>
-                    </div>
-                    <hr/>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="figure">
-                            <img src="../public/images/dance.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12">
-                        <h4>activity:</h4>
-                        <h5>creator:</h5>
-                        <h6>date/time:</h6>
-                            <p class="entry"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque, provident explicabo quis dolor neque laboriosam ullam pariatur fuga in omnis doloremque quidem, minus earum perspiciatis officia expedita ut voluptatem.
-                            </p>
-                    </div>
-                    <hr/> --}}
-
                 </div>
-            </div>
 
                 <div class="col-md-2 col-sm-12">
                     <div class="row">
-                        <h4>Shared Activity</h4>
+
+                        <h4>Share Activity</h4>
                         <form class="form activity-form ">
                             <div class="form-group p-2">
                                 <label for="activity">enter activity:</label>
@@ -179,11 +85,16 @@
                                 <br>
                                 <input class="form-input" type="password" id="activity-name" />
                             </div>
+
                             <div class="form-group p-2">
-                                <label for="activity-date">date/time:</label>
-                                <br>
-                                <input class="form-input" type="password" id="activity-date" />
+                                <label for="type">Choose a type:</label>
+                                    <select id="cars" name="cars">
+                                        <option value="Flexibility">flexibility</option>
+                                        <option value="Strength">strength</option>
+                                        <option value="Aerobic">aerobic</option>
+                                    </select>
                             </div>
+
                             <div class="form-group p-2">
                                 <label for="activity-details">event details:</label>
                                 <br>
@@ -223,9 +134,11 @@
                         </form>
                     </div>
                 </div>
-
-        </div>
+                
+            </div>
+        {{/each}}
     </div>
+{{/if}}
 </section>
 
 <section id="create-goal">
@@ -237,60 +150,6 @@
                     <div class="row">
 
 {{goals}}
-
-                        {{!-- <div class="col-md-4">
-                            <div class="figure">
-                                <img src="../public/images/g-strength.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                            </div>
-                                <h5>goal:</h5>
-                                <h6>start date:</h6>
-                                <p>motivation:</p>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="figure">
-                                <img src="../public/images/g-water.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                            </div>
-                                <h5>goal:</h5>
-                                <h6>start date:</h6>
-                                <p>motivation:</p>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="figure">
-                                <img src="../public/images/g-core.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                            </div>
-                                <h5>goal:</h5>
-                                <h6>start date:</h6>
-                                <p>motivation:</p>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="figure">
-                                <img src="../public/images/g-diet.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                            </div>
-                                <h5>goal:</h5>
-                                <h6>start date:</h6>
-                                <p>motivation:</p>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="figure">
-                                <img src="../public/images/g-balance.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                            </div>
-                                <h5>goal:</h5>
-                                <h6>start date:</h6>
-                                <p>motivation:</p>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="figure">
-                                <img src="../public/images/g-weight.jpg" class="figure-img img-fluid rounded clearfix" alt="Yoga" >
-                            </div>
-                                <h5>goal:</h5>
-                                <h6>start date:</h6>
-                                <p>motivation:</p>
-                        </div> --}}
 
                     </div>
                 </div>
@@ -334,20 +193,20 @@
 
         <div class="col-md-4 col-sm-12">
             <div class="figure">
-                <img src="../public/images/cheesecake.jpg" class="figure-img img-fluid rounded clearfix" alt="Cheesecake" >
+                <img src="images/cheesecake.jpg" class="figure-img img-fluid rounded clearfix" alt="Cheesecake" >
                     <h6>High fat desserts</h6>
             </div>
         </div>
                     <div class="col-md-4 col-sm-12">
                         <div class="figure">
-                            <img src="../public/images/pizza.jpg" class="figure-img img-fluid rounded clearfix" alt="Pizza" >
+                            <img src="images/pizza.jpg" class="figure-img img-fluid rounded clearfix" alt="Pizza" >
                                 <h6>Alternative carbs.</h6>
                             </div>
                         </div>
 
                                 <div class="col-md-4 col-sm-12">
                                     <div class="figure">
-                                        <img src="../public/images/sushi.jpg" class="figure-img img-fluid rounded clearfix" alt="Sushi" >
+                                        <img src="images/sushi.jpg" class="figure-img img-fluid rounded clearfix" alt="Sushi" >
                                             <h6>High protein with carbs.</h6>
                                         </div>
                                     </div>
