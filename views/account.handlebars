@@ -76,33 +76,26 @@
                         <h4>Share Activity</h4>
                         <form class="form activity-form ">
                             <div class="form-group p-2">
-                                <label for="activity">enter activity:</label>
+                                <label for="activity-name">enter activity:</label>
                                 <br>
-                                <input class="form-input" type="text" id="activity" />
+                                <input class="form-input" type="text" id="activity-n" />
                             </div>
                             <div class="form-group p-2">
-                                <label for="activity-name">creator name:</label>
+                                <label for="activity-type">Type of Activity:</label>
                                 <br>
-                                <input class="form-input" type="password" id="activity-name" />
+                                    <select id="activity-t" name="type">
+                                        <option value="Flexibility">Flexibility</option>
+                                        <option value="Strength">Strength</option>
+                                        <option value="Aerobic">Aerobic</option>
+                                        <br>
                             </div>
-
                             <div class="form-group p-2">
-                                <label for="type">Choose a type:</label>
-                                    <select id="cars" name="cars">
-                                        <option value="Flexibility">flexibility</option>
-                                        <option value="Strength">strength</option>
-                                        <option value="Aerobic">aerobic</option>
-                                    </select>
-                            </div>
-
-                            <div class="form-group p-2">
-                                <label for="activity-details">event details:</label>
+                                <label for="activity-description">Activity Description:</label>
                                 <br>
-                                <input class="form-input" type="password" id="activity-details" />
+                                <input class="form-input" type="text" id="activity-d"/>
                             </div>
-
                             <div class="form-group p-2 mb-4">
-                                <button class="btn btn-primary post" type="submit">post activity</button>
+                                <button class="btn btn-primary post" type="submit">Post Activity</button>
                             </div>
                         </form>
 
@@ -214,3 +207,6 @@
     </div>
 </div>
 </section>
+
+
+<script src='../public/js/account.js'></script>

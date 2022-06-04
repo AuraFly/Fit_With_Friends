@@ -35,6 +35,10 @@ User.init(
         len: [8],
       },
     },
+    userImage: {
+      type: DataTypes.STRING,
+      default: `default.png`,
+    },
     friends: {
       type: DataTypes.STRING,
     },
