@@ -26,6 +26,30 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+  try {
+    const goalsData = await Goals.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+      ],
+    });
+
+    const goals = goalsData.map((goals) =>
+      goals.get({ plain: true })
+    );
+
+    res.render("homepage", {
+      goals,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/account", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -67,6 +91,32 @@ router.get("/activities", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get("/goals", withAuth, async (req, res) => {
+  try {
+    const goalsData = await Goals.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+      ],
+    });
+
+    const goals = goalsData.map((goals) =>
+      goals.get({ plain: true })
+    );
+
+    res.render("goals", {
+      goals,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
