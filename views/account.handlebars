@@ -5,39 +5,36 @@
         <h1>Shared Activities</h1>
         <h2>{{name}}, Join your friend's activities</h2>
             <div class="row">
-
                 {{#if Activities.length}}
-                <div class="col-md-4 col-sm-12 activity-list">
-                    <div class="figure-img">
-                        {{#each Activities as |activity|}}
-                        <a href="/activity/{{activity.id}}">{{activity.name}}</a>
-                            {{!-- <div class="strImg"> --}}
-                                {{{get_strImg activity.activity_type}}}
-                            </div>
-                                <h4>activity:{{name}}</h4>
-                                <h5>creator:{{activity.user.name}}</h5>
-                                <h6>activity type:{{{activity.activity_type}}}</h6>
-                                <p class="entry">{{activity.description}}</p>
-
-                                <form class="form login-form">
-                                    <div class="form-group p-2">
-                                        <label for="comment">comments/join:</label>
-                                        <br>
-                                        <input class="form-input" type="text" id="comment" />
-                                    </div>
-
-                                    <div class="form-group p-2 mb-4">
-                                        <button class="btn btn-primary post" type="submit">post</button>
-                                    </div>    
-                                </form>
+                {{#each Activities as |activity|}}
+                    <div class="col-md-4">
+                        <div class="img-fluid">
+                            <a href="/activity/{{activity.id}}">{{activity.name}}</a>
+                                <div class="strImg">
+                                    <img class="img-fluid"{{{get_strImg activity.activity_type}}}>
+                                </div>
+                                    <h4>Activity: {{name}}</h4>
+                                    <h5>Creator: {{activity.user.name}}</h5>
+                                    <h6>Activity type: {{{activity.activity_type}}}</h6>
+                                    <p class="entry">{{activity.description}}</p>
+                                    <form class="form login-form">
+                                        <div class="form-group p-2">
+                                            <label for="comment">comments/join:</label>
+                                            <br>
+                                            <input class="form-input" type="text" id="comment" />
+                                        </div>
+                                        <div class="form-group p-2 mb-4">
+                                            <button class="btn btn-primary post" type="submit">post</button>
+                                        </div>    
+                                    </form>
+                        </div>
                     </div>
-                </div>
+                {{/each}}
             </div>
-        {{/each}}
     </div>
 {{/if}}
 </section>
-
+{{!-- 
 <section id="activity">
     <div class="container">
         <h1>User Profile</h1>
@@ -92,7 +89,9 @@
                             <div class="form-group p-2">
                                 <label for="activity-description">Activity Description:</label>
                                 <br>
+
                                 <input class="form-input" type="text" id="activity-d"/>
+
                             </div>
                             <div class="form-group p-2 mb-4">
                                 <button class="btn btn-primary post" type="submit">Post Activity</button>
@@ -162,9 +161,18 @@
                                     <input class="form-input" type="password" id="goal-date" />
                                 </div>
                                 <div class="form-group p-2">
+                                <label for="type">Choose a type:</label>
+                                    <select id="cars" name="cars">
+                                        <option value="Stamina">stamina</option>
+                                        <option value="Core">strength</option>
+                                        <option value="Diet">diet</option>
+                                        <option value="Aerobic">core</option>
+                                    </select>
+                            </div>
+                                <div class="form-group p-2">
                                     <label for="motivation">motivation:</label>
                                     <br>
-                                    <input class="form-input" type="password" id="goal-motivation" />
+                                    <input class="form-input" type="text" id="goal-motivation" />
                                 </div>
                                 <div class="form-group p-2 mb-4">
                                     <button class="btn btn-primary enter" type="submit">enter goal</button>
@@ -208,4 +216,4 @@
 </div>
 </section>
 
-<script src='../public/js/account.js'></script>
+<script src='../public/js/account.js'></script> --}}
