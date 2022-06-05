@@ -5,9 +5,11 @@ const { User } = require("../../models");
 const withAuth = require("../../utils/auth");
 const fs = require("fs");
 
+const form = new formidable.IncomingForm({ keepExtensions: true });
+var newImg;
+
 router.post("/", withAuth, async (req, res) => {
-  const form = new formidable.IncomingForm();
-  const uploadFolder = path.join(__dirname, "public", "upload");
+  const uploadFolder = path.join(__dirname, "../../", "public", "upload");
 
   form.uploadDir = uploadFolder;
   console.log(form);
@@ -37,7 +39,7 @@ router.post("/", withAuth, async (req, res) => {
       const file = files.myFile;
       const isValid = isFileValid(file);
       const fileName = encodeURIComponent(file.newFilename.replace(/\s/g, "-"));
-      console.log(file.mimetype);
+
       if (!isValid) {
         return res.status(400).json({
           status: "Fail",
@@ -46,15 +48,16 @@ router.post("/", withAuth, async (req, res) => {
       }
 
       try {
-        const newFile = await User.update(
-          { userImg: `http://localhost:3001/upload/${fileName}` },
-          { where: { id: req.session.user_id } }
+        const updatedRows = await User.update(
+          {
+            userImage: `http://localhost:3001/upload/${fileName}`,
+          },
+          {
+            where: { id: req.session.user_id },
+          }
         );
-
-        return res.status(200).json({
-          status: "success",
-          message: "File created successfully!!",
-        });
+        console.log(updatedRows);
+        return res.redirect("/account");
       } catch (error) {
         res.json({
           error,

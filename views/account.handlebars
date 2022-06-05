@@ -2,13 +2,13 @@
 
 <section id="activity">
     <div class="container">
-        <h2 class="page-header">{{user.name}}
-<span style="color: blue">{{user.username}}</span></h2>
+        <h2 class="page-header">{{name}}
+<span style="color: blue"></span></h2>
 <div style="margin-left: 30%">
 <img
     class="profilestyle"
-    src="http://localhost:3001/upload/default.png"
-    alt="{{user.userImage}}"
+    src="{{userImage}}"
+    alt="profileimg"
 />
 <form
     action="/api/account"
