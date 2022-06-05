@@ -18,13 +18,13 @@ const seedDatabase = async () => {
       ...activity,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
+  }
 
-    for (const goals of goalsData) {
-      await Goals.create({
-        ...goals,
-        user_id: users[Math.floor(Math.random() * users.length)].id,
-      });
-    }
+  for (const goals of goalsData) {
+    await Goals.create({
+      ...goals,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
   }
 
   process.exit(0);

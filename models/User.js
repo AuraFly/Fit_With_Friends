@@ -36,8 +36,8 @@ User.init(
       },
     },
     userImage: {
-      type: DataTypes.STRING,
-      default: `default.png`,
+      type: DataTypes.LONGTEXT,
+      default: "default.png",
     },
     friends: {
       type: DataTypes.STRING,
