@@ -6,7 +6,7 @@ const newActivity = async (event) => {
   const description = document.querySelector("#activity-d").value.trim();
 
   if (name && type && description) {
-    const response = await fetch(`/api/activities`, {
+    const response = await fetch(`/account/activities`, {
       method: "POST",
       body: JSON.stringify({ name, type, description }),
       headers: {
@@ -26,7 +26,7 @@ const delActivity = async (event) => {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
 
-    const response = await fetch(`/api/activities/${id}`, {
+    const response = await fetch(`/account/activities/${id}`, {
       method: "DELETE",
     });
 

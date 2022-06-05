@@ -27,9 +27,9 @@ Goals.init(
       allowNull: true,
     },
     motivation: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
