@@ -43,8 +43,9 @@
     {{this.friendName}}
     </p>
 {{/each}}
-
 </div>
+
+
 <section id="activity">
     <div class="container">
         <h1>Shared Activities</h1>
@@ -87,30 +88,30 @@
         <h2>{{name}}, Post your activities</h2>
             <div class="row">
 
-                {{#each activities as |activity|}}
                 <div class="col-10">
                     <div class="row">
-
+                        {{#each activities as |activity|}}
                         <div class="col-md-4">
                             <div class="img-fluid">
                                 <a href="/activity/{{activity.id}}">{{activity.name}}</a>
-                                        <div class="strImg">
-                                        <img class="img-fluid"{{{get_strImg activity.activity_type}}}>
-                                        </div>
+                                    <div class="strImg">
+                                    <img class="img-fluid"{{{get_strImg activity.activity_type}}}>
+                                    </div>
                             </div>
                         </div>
-                                <div class="col-md-6 col-sm-12 activity-list">
-                                    <h4>Activity type: {{{activity.activity_type}}}</h4>
-                                    <h5>Creator: {{activity.user.name}}</h5>
-                                    <h6>Activity: {{name}}</h6>
-                                    <p class="entry">{{activity.description}} </p>
-                                    <button class="btn btn-sm btn-danger" data-id="{{activity.id}}">Remove this Activity</button>
-                                </div>    
-                                <hr/>
+                        <div class="col-md-6 col-sm-12 activity-list">
+                            <h4>Activity type: {{{activity.activity_type}}}</h4>
+                                <h5>Creator: {{activity.user.name}}</h5>
+                                <h6>Activity: {{name}}</h6>
+                                <p class="entry">{{activity.description}} </p>
+                                <button class="btn btn-sm btn-danger" data-id="{{activity.id}}">Remove this Activity</button>
+                        </div> 
+                        <hr/>
+                        {{/each}} 
                     </div>
                 </div>
-                {{/each}}
-{{/if}}
+                {{/if}}
+
                 <div class="col-md-2 col-sm-12">
                     <div class="row">
 
@@ -149,16 +150,15 @@
     </div>
 </section>
 
-
 <section id="create-goal">
     <div class="container">
             <h2>Create a Personal Goal</h2></span>
         <div class="row">
 
-                <div class="col-10">
-                    <div class="row">
-                {{#if goals.length}}
-                {{#each goals as |goal|}}
+            <div class="col-10">
+                <div class="row">
+                    {{#if goals.length}}
+                    {{#each goals as |goal|}}
                     <div class="col-md-4">
                         <div class="img-fluid">
                             <a href="/activity/{{goal.id}}">{{goals.name}}</a>
@@ -181,13 +181,10 @@
                                     </form>
                         </div>
                     </div>
-                {{/each}}
-            </div>
-    </div>
-{{/if}}
-
-                    </div>
+                    {{/each}}
                 </div>
+            </div>
+            {{/if}}
 
                     <div class="col-md-2 col-sm-12">
                         <div class="row">
@@ -222,9 +219,10 @@
                                 </div>    
                             </form>
                         </div>
-            </div>
+                    </div>
         </div>
-    </section>
+    </div>
+</section>
 
 <section id="cheat-day">
 <div class="container">
@@ -256,6 +254,5 @@
     </div>
 </div>
 </section>
-
 
 <script src='./js/account.js'></script>
