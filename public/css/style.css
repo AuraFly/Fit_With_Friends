@@ -146,9 +146,13 @@ h2 {
 }
 
 /* FOOTER---------------------------------------------- */
+.img-welcome {
+  margin-bottom: 0 !important;
+}
+
 .footer {
   /*FOOTER BACKGROUND*/
-  margin-top: 53px;
+  margin-top: 0 !important;
   padding: 15px;
   background-color: rgb(40, 39, 39);
   text-decoration: none;
@@ -160,6 +164,10 @@ h2 {
   color: gray;
   font-size: 14px;
   text-align: left;
+}
+
+.panel-content .wrap {
+  padding: 1em 0;
 }
 /* END FOOTER------------------------------------------ */
 .profilestyle {

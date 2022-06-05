@@ -4,7 +4,7 @@
     <div class="container">
         <h2 class="page-header">{{user.name}}
 <span style="color: blue">{{user.username}}</span></h2>
-<div style="margin-left: 30%">
+<div style="margin-left: 0%">
 <img
     class="profilestyle"
     src="http://localhost:3001/upload/default.png"
@@ -45,6 +45,8 @@
 {{/each}}
 
 </div>
+<section id="activity">
+    <div class="container">
         <h1>Shared Activities</h1>
         <h2>{{name}}, Join your friend's activities</h2>
             <div class="row">
@@ -56,9 +58,9 @@
                                 <div class="strImg">
                                     <img class="img-fluid"{{{get_strImg activity.activity_type}}}>
                                 </div>
-                                    <h4>Activity: {{name}}</h4>
+                                    <h4>Activity type: {{{activity.activity_type}}}</h4>
                                     <h5>Creator: {{activity.user.name}}</h5>
-                                    <h6>Activity type: {{{activity.activity_type}}}</h6>
+                                    <h6>Activity: {{name}}</h6>
                                     <p class="entry">{{activity.description}}</p>
                                     <form class="form login-form">
                                         <div class="form-group p-2">
@@ -84,57 +86,58 @@
         <h1>User Profile</h1>
         <h2>{{name}}, Post your activities</h2>
             <div class="row">
+
+                {{#each activities as |activity|}}
                 <div class="col-10">
                     <div class="row">
-                        {{#each activities as |activity|}}
-                            <div>
-                                <div class="col-md-4">
-                                    <div class="img-fluid">
-                                        <a href="/activity/{{activity.id}}">{{activity.name}}</a>
-                                            <div class="strImg">
-                                                {{{get_strImg activity.activity_type}}}
-                                            </div>
-                                    </div>
-                                </div>
+
+                        <div class="col-md-4">
+                            <div class="img-fluid">
+                                <a href="/activity/{{activity.id}}">{{activity.name}}</a>
+                                        <div class="strImg">
+                                        <img class="img-fluid"{{{get_strImg activity.activity_type}}}>
+                                        </div>
+                            </div>
+                        </div>
                                 <div class="col-md-6 col-sm-12 activity-list">
-                                    <h4>Activity: {{name}}</h4>
+                                    <h4>Activity type: {{{activity.activity_type}}}</h4>
                                     <h5>Creator: {{activity.user.name}}</h5>
-                                    <h6>Activity type: {{{activity.activity_type}}}</h6>
-                                    <p class="entry">{{activity.description}}</p>
+                                    <h6>Activity: {{name}}</h6>
+                                    <p class="entry">{{activity.description}} </p>
                                     <button class="btn btn-sm btn-danger" data-id="{{activity.id}}">Remove this Activity</button>
                                 </div>    
                                 <hr/>
-                            </div>
-                        {{/each}}
                     </div>
                 </div>
-
+                {{/each}}
+{{/if}}
                 <div class="col-md-2 col-sm-12">
                     <div class="row">
 
                         <h4>Share Activity</h4>
+
                         <form class="form activity-form ">
                             <div class="form-group p-2">
                                 <label for="activity-name">enter activity:</label>
                                 <br>
                                 <input class="form-input" type="text" id="activity-n" />
                             </div>
+
                             <div class="form-group p-2">
                                 <label for="activity-type">Type of Activity:</label>
-                                <br>
-                                    <select id="activity-t" name="type">
-                                        <option value="Flexibility">Flexibility</option>
-                                        <option value="Strength">Strength</option>
-                                        <option value="Aerobic">Aerobic</option>
-                                        <br>
+                                <select id="activity-t" name="type">
+                                <option value="Flexibility">Flexibility</option>
+                                <option value="Strength">Strength</option>
+                                <option value="Aerobic">Aerobic</option>
+                                </select>
                             </div>
+
                             <div class="form-group p-2">
                                 <label for="activity-description">Activity Description:</label>
                                 <br>
-
                                 <input class="form-input" type="text" id="activity-d"/>
-
                             </div>
+
                             <div class="form-group p-2 mb-4">
                                 <button class="btn btn-primary post" type="submit">Post Activity</button>
                             </div>
@@ -143,9 +146,7 @@
                 </div>
                 
             </div>
-
     </div>
-{{/if}}
 </section>
 
 
@@ -210,7 +211,7 @@
                                         <option value="Diet">diet</option>
                                         <option value="Aerobic">core</option>
                                     </select>
-                            </div>
+                                </div>
                                 <div class="form-group p-2">
                                     <label for="motivation">motivation:</label>
                                     <br>
@@ -221,16 +222,6 @@
                                 </div>    
                             </form>
                         </div>
-                    </div>
-                        <div class="form-group p-2">
-    <label for="goal-type">Goal type:</label>
-    <select id="type" name="type">
-    <option value="Core">core</option>
-    <option value="Strength">strength</option>
-    <option value="Stamina">stamina</option>
-    <option value="Diet">diet</option>
-    </select>
-</div>
             </div>
         </div>
     </section>
