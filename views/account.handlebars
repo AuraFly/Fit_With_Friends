@@ -11,7 +11,7 @@
     alt="{{user.userImage}}"
 />
 <form
-    action="/"
+    action="/api/account"
     enctype="multipart/form-data"
     method="post"
     style="margin-top: 10px"
@@ -23,10 +23,10 @@
     >
     <input
         type="file"
-        name="upload"
+        name="myFile"
         accept="image/*"
         style=" display: none;"
-        onchange="document.getElementById('custombutton').style.border = '2px solid lightgreen'"/>
+        onchange="document.getElementById('custombutton').style.border = '2px solid lightblue'"/>
     Select new file </label>
     <input
     type="submit"
@@ -36,8 +36,8 @@
 </div>
 <div style="text-align: center;">
 <h3
-    style="background-color: whitesmoke; padding: 10px; border-radius: 5px; border: 1px solid lightgray"
->{{name}}'s' Friends</h3>
+    style="background-color: whitesmoke; padding: 10px; border-radius: 5px; border: 1px solid lightgray">
+    {{name}}'s' Friends</h3>
 {{#each user.friendsList}}
     <p>
     {{this.friendName}}
@@ -131,7 +131,6 @@
                             <div class="form-group p-2">
                                 <label for="activity-description">Activity Description:</label>
                                 <br>
-
                                 <input class="form-input" type="text" id="activity-d"/>
 
                             </div>
