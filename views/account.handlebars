@@ -2,12 +2,54 @@
 
 <section id="activity">
     <div class="container">
-        <h2 class="profile-header"><img src="http://localhost:3001/upload/default.png" style="width: 100px; position: absolute;left: 200px"> {{name}}</h2>
+        <h2 class="page-header">{{user.name}}
+<span style="color: blue">{{user.username}}</span></h2>
+<div style="margin-left: 30%">
+<img
+    class="profilestyle"
+    src="http://localhost:3001/upload/default.png"
+    alt="{{user.userImage}}"
+/>
+<form
+    action="/"
+    enctype="multipart/form-data"
+    method="post"
+    style="margin-top: 10px"
+>
+    <label
+    class="custombutton"
+    id="custombutton"
+    style="width:200px;border: 1px solid #ccc;display: inline-block; padding: 6px 12px;cursor: pointer;"
+    >
+    <input
+        type="file"
+        name="upload"
+        accept="image/*"
+        style=" display: none;"
+        onchange="document.getElementById('custombutton').style.border = '2px solid lightgreen'"/>
+    Select new file </label>
+    <input
+    type="submit"
+    value="Upload"
+    style="border: 1px solid #2d2d2d; padding: 6px 12px; cursor: pointer; background-color: #2d2d2d; color: #ccc"/>
+    </form>
+</div>
+<div style="text-align: center;">
+<h3
+    style="background-color: whitesmoke; padding: 10px; border-radius: 5px; border: 1px solid lightgray"
+>{{name}}'s' Friends</h3>
+{{#each user.friendsList}}
+    <p>
+    {{this.friendName}}
+    </p>
+{{/each}}
+
+</div>
         <h1>Shared Activities</h1>
         <h2>{{name}}, Join your friend's activities</h2>
             <div class="row">
-                {{#if Activities.length}}
-                {{#each Activities as |activity|}}
+                {{#if activities.length}}
+                {{#each activities as |activity|}}
                     <div class="col-md-4">
                         <div class="img-fluid">
                             <a href="/activity/{{activity.id}}">{{activity.name}}</a>
@@ -36,29 +78,25 @@
 {{/if}}
 </section>
 
+{{#if activities.length}}
 <section id="activity">
     <div class="container">
         <h1>User Profile</h1>
         <h2>{{name}}, Post your activities</h2>
             <div class="row">
-
                 <div class="col-10">
                     <div class="row">
-
-                        {{#if Activities.length}}
-                        {{#each Activities as |activity|}}
+                        {{#each activities as |activity|}}
                             <div>
                                 <div class="col-md-4">
                                     <div class="img-fluid">
-
                                         <a href="/activity/{{activity.id}}">{{activity.name}}</a>
                                             <div class="strImg">
                                                 {{{get_strImg activity.activity_type}}}
                                             </div>
                                     </div>
                                 </div>
-
-                                <div class="col-md-6 col-sm-12 ">
+                                <div class="col-md-6 col-sm-12 activity-list">
                                     <h4>Activity: {{name}}</h4>
                                     <h5>Creator: {{activity.user.name}}</h5>
                                     <h6>Activity type: {{{activity.activity_type}}}</h6>
@@ -66,7 +104,6 @@
                                     <button class="btn btn-sm btn-danger" data-id="{{activity.id}}">Remove this Activity</button>
                                 </div>    
                                 <hr/>
-
                             </div>
                         {{/each}}
                     </div>
@@ -102,33 +139,6 @@
                                 <button class="btn btn-primary post" type="submit">Post Activity</button>
                             </div>
                         </form>
-
-                        <h4>Search Friends</h4>
-                        <form class="form friend-form ">
-                            <div class="form-group p-2">
-                                <label for="friend">enter friend username:</label>
-                                <br>
-                                <input class="form-input" type="text" id="search" />
-                            </div>
-                            <div class="form-group p-2 mb-4">
-                                <button class="btn btn-primary request" type="submit">request</button>
-                            </div>
-                        </form>
-
-                        <h4>Pending Invites</h4>
-                        <form class="form accept-form ">
-                            <h6>invite #1:</h6>
-                            <div class="form-group p-2 mb-2">
-                                <button class="btn btn-dark accept" type="submit">accept</button>
-                            </div>
-                        </form>
-
-                        <form class="form accept-form ">
-                            <h6>invite #2:</h6>
-                            <div class="form-group p-2 mb-2">
-                                <button class="btn btn-dark accept" type="submit">accept</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
                 
@@ -146,8 +156,34 @@
 
                 <div class="col-10">
                     <div class="row">
-
-{{goals}}
+                {{#if goals.length}}
+                {{#each goals as |goal|}}
+                    <div class="col-md-4">
+                        <div class="img-fluid">
+                            <a href="/activity/{{goal.id}}">{{goals.name}}</a>
+                                <div class="strImg">
+                                    <img class="img-fluid"{{{get_strImg activity.activity_type}}}>
+                                </div>
+                                    <h4>Goal: {{name}}</h4>
+                                    <h5>Creator: {{goals.user.name}}</h5>
+                                    <h6>Goal type: {{{goals.goal_type}}}</h6>
+                                    <p class="entry">{{goals.description}}</p>
+                                    <form class="form login-form">
+                                        <div class="form-group p-2">
+                                            <label for="comment">comments/join:</label>
+                                            <br>
+                                            <input class="form-input" type="text" id="comment" />
+                                        </div>
+                                        <div class="form-group p-2 mb-4">
+                                            <button class="btn btn-primary post" type="submit">post</button>
+                                        </div>    
+                                    </form>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+    </div>
+{{/if}}
 
                     </div>
                 </div>
@@ -186,7 +222,15 @@
                             </form>
                         </div>
                     </div>
-                        
+                        <div class="form-group p-2">
+    <label for="goal-type">Goal type:</label>
+    <select id="type" name="type">
+    <option value="Core">core</option>
+    <option value="Strength">strength</option>
+    <option value="Stamina">stamina</option>
+    <option value="Diet">diet</option>
+    </select>
+</div>
             </div>
         </div>
     </section>
@@ -223,4 +267,4 @@
 </section>
 
 
-<script src='../public/js/account.js'></script>
+<script src='./js/account.js'></script>
