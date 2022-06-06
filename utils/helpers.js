@@ -64,9 +64,11 @@ module.exports = {
       case "Strength":
         imag1 = "http://localhost:3001/images/g-strength.jpg";
         imag2 = "http://localhost:3001/images/g-strength2.jpg";
+        break;
       case "Diet":
         imag1 = "http://localhost:3001/images/g-diet.jpg";
         imag2 = "http://localhost:3001/images/g-water.jpg";
+        break;
       case "Core":
         imag1 = "http://localhost:3001/images/g-core.jpg";
         imag2 = "http://localhost:3001/images/g-balance.jpg";
