@@ -66,6 +66,29 @@ router.get("/account", withAuth, async (req, res) => {
   }
 });
 
+router.get("/search", withAuth, (req, res) => {
+  // var sent = [];
+  // var friends = [];
+  // var received = [];
+  //STILL NEED TO BUILD THIS OUT.
+  // received = req.user.name;
+  // sent = req.user.sentRequest;
+  // friends = req.user.friendsList;
+
+  // User.findAll({ id: { $ne: req.session.user_id } }, (err, result) => {
+  //   if (err) throw err;
+
+  res.render(
+    "search"
+    // , {
+    //   result: result,
+    //   sent: sent,
+    //   friends: friends,
+    //   received: received,
+    // }
+  );
+});
+
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/account");

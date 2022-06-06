@@ -39,8 +39,34 @@ const delActivity = async (event) => {
   }
 };
 
-document
-  .querySelector(".activity-form")
-  .addEventListener("submit", newActivity);
+document.querySelector(".activity-form").addEventListener("click", newActivity);
 
 document.querySelector(".activity-list").addEventListener("click", delActivity);
+
+const postComment = async (event) => {
+  event.preventDefault();
+
+  const comment = document.querySelector("#comment-act").value.trim();
+  const creator = document.querySelector("#profile-name").value.trim();
+
+  if (event.target.hasAttribute("data-id")) {
+    const activity_id = event.target.getAttribute("data-id");
+
+    const response = await fetch(`/api/post`, {
+      method: "POST",
+      body: JSON.stringify({ comment, creator, activity_id }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace("/account");
+    } else {
+      console.log(response);
+      alert("Failed to create comment");
+    }
+  }
+};
+
+document.querySelector(".post-button").addEventListener("click", postComment);

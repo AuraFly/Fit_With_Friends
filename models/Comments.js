@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Friends extends Model {}
+class Comments extends Model {}
 
-Friends.init(
+Comments.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,22 +11,17 @@ Friends.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    user1: {
+    comment: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user2: {
+    creator: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
-    friend_status: {
-      type: DataTypes.ENUM("Yes", "No", "Pending"),
-      allowNull: false,
-    },
-    user_id: {
+    activity_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
+        model: "Activity",
         key: "id",
       },
     },
@@ -36,8 +31,8 @@ Friends.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Friends",
+    modelName: "Comments",
   }
 );
 
-module.exports = Friends;
+module.exports = Comments;

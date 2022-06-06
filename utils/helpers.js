@@ -38,19 +38,19 @@ module.exports = {
         break;
     }
     if (randomNum > 8) {
-      return `<img src="${image1}" alt="${type}">`;
+      return `src="${image1}" alt="${type}"`;
     } else if (randomNum > 6) {
-      return `<img src="${image2}" alt="${type}">`;
+      return `src="${image2}" alt="${type}"`;
     } else if (randomNum > 4) {
-      return `<img src="${image3}" alt="${type}">`;
+      return `src="${image3}" alt="${type}"`;
     } else if (randomNum > 2) {
-      return `<img src="${image4}" alt="${type}">`;
+      return `src="${image4}" alt="${type}"`;
     } else {
-      return `<img src="${image5}" alt="${type}">`;
+      return `src="${image5}" alt="${type}"`;
     }
   },
 
-  get_goalImg: (gtype) => {
+  goalImg: (gtype) => {
     const randomNumb = Math.floor(Math.random() * 11);
 
     let imag1 = "";
@@ -73,9 +73,9 @@ module.exports = {
         break;
     }
     if (randomNumb > 5) {
-      return `<img src="${imag1}" alt="${gtype}">`;
+      return `src="${imag1}" alt="${gtype}"`;
     } else {
-      return `<img src="${imag2}" alt="${gtype}">`;
+      return `src="${imag2}" alt="${gtype}"`;
     }
   },
-}
+};
