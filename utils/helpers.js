@@ -47,4 +47,35 @@ module.exports = {
       return `<img src="${image3}" alt="${type}">`;
     }
   },
+
+get_goalImg: (type) => {
+  const randomNum = Math.floor(Math.random() * 11);
+
+  let image1 = "";
+  let image2 = "";
+  switch (type) {
+    case "Stamina":
+      image1 = "http://localhost:3001/images/g-stamina.jpg";
+      image2 = "http://localhost:3001/images/g-stamina2.jpg";
+      break;
+    case "Strength":
+      image1 = "http://localhost:3001/images/g-strength.jpg";
+      image2 = "http://localhost:3001/images/g-strength2.jpg";
+    case "Diet":
+      image1 = "http://localhost:3001/images/g-diet.jpg";
+      image2 = "http://localhost:3001/images/g-water.jpg";
+    case "Core":
+      image1 = "http://localhost:3001/images/g-core.jpg";
+      image2 = "http://localhost:3001/images/g-balance.jpg";
+    default:
+      break;
+  }
+  if (randomNum > 8) {
+    return `<img src="${image1}" alt="${type}">`;
+  } else if (randomNum > 4) {
+    return `<img src="${image2}" alt="${type}">`;
+  } else {
+    return `<img src="${image3}" alt="${type}">`;
+  }
+},
 };
