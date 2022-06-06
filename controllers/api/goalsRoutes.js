@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Goals, User } = require("../../models");
+const { Goals } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.post("/", withAuth, async (req, res) => {
@@ -15,14 +15,14 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-router.delete("/:id", withAuth, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const goalsData = await Goals.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
+    console.log(req.params.id);
 
     if (!goalsData) {
       res.status(404).json({ message: "Sorry, this goal doesnt exist!" });
