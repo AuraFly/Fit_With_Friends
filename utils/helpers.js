@@ -39,43 +39,40 @@ module.exports = {
       default:
         break;
     }
-    if (randomNum > 8) {
+    if (randomNum > 15) {
       return `<img src="${image1}" alt="${type}">`;
-    } else if (randomNum > 4) {
+    } else if (randomNum > 7) {
       return `<img src="${image2}" alt="${type}">`;
     } else {
       return `<img src="${image3}" alt="${type}">`;
     }
   },
 
-get_goalImg: (type) => {
-  const randomNum = Math.floor(Math.random() * 11);
+get_goalImg: (gtype) => {
+  const randomNumb = Math.floor(Math.random() * 7);
 
-  let image1 = "";
-  let image2 = "";
-  switch (type) {
+  let imag1 = "";
+  let imag2 = "";
+  switch (gtype) {
     case "Stamina":
-      image1 = "http://localhost:3001/images/g-stamina.jpg";
-      image2 = "http://localhost:3001/images/g-stamina2.jpg";
+      imag1 = "http://localhost:3001/images/g-stamina.jpg";
+      imag2 = "http://localhost:3001/images/g-stamina2.jpg";
       break;
     case "Strength":
-      image1 = "http://localhost:3001/images/g-strength.jpg";
-      image2 = "http://localhost:3001/images/g-strength2.jpg";
+      imag1 = "http://localhost:3001/images/g-strength.jpg";
+      imag2 = "http://localhost:3001/images/g-strength2.jpg";
     case "Diet":
-      image1 = "http://localhost:3001/images/g-diet.jpg";
-      image2 = "http://localhost:3001/images/g-water.jpg";
+      imag1 = "http://localhost:3001/images/g-diet.jpg";
+      imag2 = "http://localhost:3001/images/g-water.jpg";
     case "Core":
-      image1 = "http://localhost:3001/images/g-core.jpg";
-      image2 = "http://localhost:3001/images/g-balance.jpg";
+      imag1 = "http://localhost:3001/images/g-core.jpg";
+      imag2 = "http://localhost:3001/images/g-balance.jpg";
     default:
       break;
-  }
-  if (randomNum > 8) {
-    return `<img src="${image1}" alt="${type}">`;
-  } else if (randomNum > 4) {
-    return `<img src="${image2}" alt="${type}">`;
-  } else {
-    return `<img src="${image3}" alt="${type}">`;
-  }
-},
-};
+    }
+    if (randomNumb > 5) {
+      return `<img src="${imag1}" alt="${gtype}">`;
+    } else if (randomNumb > 0) {
+      return `<img src="${imag2}" alt="${gtype}">`;
+    }
+  }}
