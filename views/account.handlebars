@@ -2,8 +2,7 @@
 
 <section id="activity">
     <div class="container">
-        <h2 class="page-header">{{name}}
-<span style="color: blue"></span></h2>
+        <h2 class="profile-name" id="profile-name">{{name}}</h2>
 <div style="margin-left: 0%">
 <img
     class="profilestyle"
@@ -38,11 +37,11 @@
 <h3
     style="background-color: whitesmoke; padding: 10px; border-radius: 5px; border: 1px solid lightgray">
     {{name}}'s' Friends</h3>
-{{#each user.friendsList}}
+{{!-- {{#each user.friendsList}}
     <p>
     {{this.friendName}}
     </p>
-{{/each}}
+{{/each}} --}}
 </div>
 
 
@@ -67,10 +66,10 @@
                                         <div class="form-group p-2">
                                             <label for="comment">comments/join:</label>
                                             <br>
-                                            <input class="form-input" type="text" id="comment" />
+                                            <input class="form-input" type="text" id="comment-act" />
                                         </div>
-                                        <div class="form-group p-2 mb-4">
-                                            <button class="btn btn-primary post" type="submit">post</button>
+                                        <div class="form-group p-2 mb-4 post-button">
+                                            <button class="btn btn-primary post" data-id="{{activity.id}}" type="submit">Post</button>
                                         </div>    
                                     </form>
                         </div>
@@ -161,23 +160,28 @@
                     {{#each goals as |goal|}}
                     <div class="col-md-4">
                         <div class="img-fluid">
-                            <a href="/goals/{{goal.id}}">{{goals.name}}</a>
+                            <a href="/goals/{{goal.id}}">{{goal.name}}</a>
                                 <div class="goalImg">
-                                    <img class="img-fluid"{{{get_goalImg activity.activity_gtype}}} />
+                                <img class="img-fluid" src="http://localhost:3001/images/goalsmain.jpg" alt="${gtype}">
                                 </div>
                                     <h4>Goal: {{name}}</h4>
-                                    <h5>Creator: {{goals.user.name}}</h5>
-                                    <h6>Goal type: {{{goals.goal_gtype}}}</h6>
-                                    <p class="entry">{{goals.motivation}}</p>
+                                    <h5>Creator: {{goal.user.name}}</h5>
+                                    <h6>Goal type: {{{goal.goal_type}}}</h6>
+                                    <p class="entry">{{goal.motivation}}</p>
                                     <form class="form login-form">
                                         <div class="form-group p-2">
-                                            <label for="comment">comments/join:</label>
+                                            <label for="comment">Comment:</label>
                                             <br>
                                             <input class="form-input" type="text" id="comment" />
                                         </div>
-                                        <div class="form-group p-2 mb-4">
-                                            <button class="btn btn-primary post" type="submit">post</button>
-                                        </div>    
+                                        <div class="form-group p-2 mb-4 button">
+                                            <button class="btn btn-primary post" type="submit">Post</button>
+                                        </div>
+                                        <h5>Comments:</h5>
+                                        <h6>Jordan Says:</h6>
+                                        <p>Test comment, this is how this is going to look!</p>
+                                                                                <h6>Jordan Says:</h6>
+                                        <p>Wow, another comment!</p>
                                     </form>
                         </div>
                     </div>
@@ -251,3 +255,4 @@
 </section>
 
 <script src='./js/account.js'></script>
+<script src='./js/goals.js'></script>

@@ -13,14 +13,12 @@ Goals.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
     },
     goal_type: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     amount: {
       type: DataTypes.INTEGER,
