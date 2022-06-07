@@ -28,6 +28,7 @@ module.exports = {
         image3 = "http://localhost:3001/images/hike.jpg";
         image4 = "http://localhost:3001/images/swim.jpg";
         image5 = "http://localhost:3001/images/run.jpg";
+        break;
       case "Flexibility":
         image1 = "http://localhost:3001/images/stretching.jpg";
         image2 = "http://localhost:3001/images/yoga.jpg";
@@ -63,9 +64,11 @@ module.exports = {
       case "Strength":
         imag1 = "http://localhost:3001/images/g-strength.jpg";
         imag2 = "http://localhost:3001/images/g-strength2.jpg";
+        break;
       case "Diet":
         imag1 = "http://localhost:3001/images/g-diet.jpg";
         imag2 = "http://localhost:3001/images/g-water.jpg";
+        break;
       case "Core":
         imag1 = "http://localhost:3001/images/g-core.jpg";
         imag2 = "http://localhost:3001/images/g-balance.jpg";
