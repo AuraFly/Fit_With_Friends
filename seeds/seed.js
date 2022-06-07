@@ -2,7 +2,7 @@ const sequelize = require("../config/connection");
 const { User, Activity, Goals, Comments } = require("../models");
 
 const userData = require("./userData.json");
-const activityData = require("./ActivityData.json");
+const activityData = require("./activityData.json");
 const goalsData = require("./goalsData.json");
 const commentsData = require("./commentsData.json");
 
