@@ -3,24 +3,24 @@
     "name": "Walker",
     "email": "walker@something.com",
     "password": "pasword123456",
-    "userImage": "http://localhost:3001/upload/default.jpg"
+    "userImage": "upload/default.jpg"
   },
   {
     "name": "Cynthia",
     "email": "cynthia@something.com",
     "password": "pasword12345",
-    "userImage": "http://localhost:3001/upload/default.jpg"
+    "userImage": "upload/default.jpg"
   },
   {
     "name": "Ellen",
     "email": "ellen@something.com",
     "password": "pasword1234",
-    "userImage": "http://localhost:3001/upload/default.jpg"
+    "userImage": "upload/default.jpg"
   },
   {
     "name": "Jordan",
     "email": "auraflydev@gmail.com",
     "password": "pasword123",
-    "userImage": "http://localhost:3001/upload/default.jpg"
+    "userImage": "upload/default.jpg"
   }
 ]
