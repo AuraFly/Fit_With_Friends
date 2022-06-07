@@ -4,9 +4,9 @@
 
 ![University of Denver Logog](https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/denver-switchup-thumbnail-a/original.png?1560210160)
 
-## Description:
+## Description
 
-Project designed and built a Fitness with Friends Full-stack application using the MVC paradigm, a server-side API with user authentication, with a connection and using sequelize to a mySQL database.  The application is running on a localhost as well as Heroku. The project uses an open forum approach with a collaborative workflow.  In addition, GitHub techiques such as branching, merging were used extensively.  The tasks were done collaboratively but there were general sections which team members would work on concurrently such as routes, models, handlebars following the MVP guidelines.  Each team member assisted each other in case there were gaps or difficulties in the code.  The focus was to get goals and activites to post in the main account page.
+Fitness with Friends, is a Full-Stack application designed and built using the MVC (Model View Controller) paradigm, with a server-side API with user authentication, as well as, a Node server connection, and Sequelize to interact with a MYSQL database. Express-Handlebars was one of the NPM packages used for the project. In addition, GitHub techiques such as branching, merging were used extensively.  The tasks were done collaboratively but team members worked concurrently on sections of the MVC with the routes, models, and handlebars following the guidelines.  Each team member assisted each other in cases where there were gaps or difficulties in the code.  The project uses an open forum for the application for users to login into a user account page to view and post their activities and movements.The focus was to get goals and activites to post in the main user account page.   The application is running on a localhost as well as Heroku.
 
 
 Project 2 - Team 8
@@ -26,7 +26,6 @@ Project 2 - Team 8
   - [Contact](#contact-me)
 
   
-
   ## Installation
 
 [express-handlebars](https://www.npmjs.com/package/express-handlebars) The application's folder structure follows the Model-View-Controller paradigm by using the handlebars package.
@@ -71,8 +70,11 @@ npm install connect-session-sequelize
 ## Deployed Heroku URL: 
 
 [Heroku]()
+[GITHUB] (https://github.com/AuraFly/Fit_With_Friends.git)
+[GITHUB] (git@github.com:AuraFly/Fit_With_Friends.git)
 
-  Utilizes node and MySQL for database storage.
+
+  
   NPM packeges used:
 
 [bcrypt 5.0.1](https://www.npmjs.com/package/bcrypt)
@@ -88,18 +90,17 @@ npm install connect-session-sequelize
 
 ## Additional Tools used:
 
-[SQL-Template-Strings] The SQL template string tag transforms the template            string and returns an object that is understood by both mysql and postgres.
+[SQL-Template-Strings] The SQL template string tag transforms the template string and returns an object that is understood by both mysql and postgres.
 
-[Trello] - Kanban Board an agile methodology and a visual method for managing and processing work. (https://trello.com/en-US)
+[Trello] - Kanban Board an agile methodology and a visual method for managing and processing work. 
+(https://trello.com/en-US)
 
 [Formidable] A Node.js module for parsing form data, especially file uploads. 
 (https://formidable.com/)
 
-[SQL-Template-Strings] The SQL template string tag transforms the template            string and returns an object that is understood by both mysql and postgres.
+## Usage
 
-## Main Objective
-
-The application's front end has already been created. The task is to build the back end, connect the two, and then deploy the entire application to **Heroku**.
+Deploying to Heroku:
 
 [To install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
 
@@ -148,28 +149,18 @@ To confirm there is a remote name heroku set on your app
 ```
 git remote -v
 ```
-2:33
 
-  # Usage
-
-  WIP
-
-  [Placeholder]
 
   # Contribution
 
-  WIP
-
   Open to any and all contributions!
 
-  # Git Info
-
-  WIP
-
+  
   # Contact Me
 
   [Contact Me](mailto:JordanJco@gmail.com)
 
+  
   # License
 
   This application is covered under the MIT open source license.
