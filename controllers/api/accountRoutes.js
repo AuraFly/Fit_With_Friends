@@ -50,7 +50,7 @@ router.post("/", withAuth, async (req, res) => {
       try {
         const updatedRows = await User.update(
           {
-            userImage: `http://localhost:3001/upload/${fileName}`,
+            userImage: `/upload/${fileName}`,
           },
           {
             where: { id: req.session.user_id },
