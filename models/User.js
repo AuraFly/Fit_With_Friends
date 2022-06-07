@@ -37,7 +37,7 @@ User.init(
     },
     userImage: {
       type: DataTypes.STRING,
-      default: `/upload/default.png`,
+      default: `/upload/default.jpg`,
     },
   },
   {
