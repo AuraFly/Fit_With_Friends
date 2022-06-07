@@ -6,6 +6,9 @@
 
 ## Description:
 
+Project designed and built a Fitness with Friends Full-stack application using the MVC paradigm, a server-side API with user authentication, with a connection and using sequelize to a mySQL database.  The application is running on a localhost as well as Heroku. The project uses an open forum approach with a collaborative workflow.  In addition, GitHub techiques such as branching, merging were used extensively.  The tasks were done collaboratively but there were general sections which team members would work on concurrently such as routes, models, handlebars following the MVP guidelines.  Each team member assisted each other in case there were gaps or difficulties in the code.  The focus was to get goals and activites to post in the main account page.
+
+
 Project 2 - Team 8
 
 - Cynthia Godoy
@@ -22,7 +25,52 @@ Project 2 - Team 8
   - [Git Info](#git-info)
   - [Contact](#contact-me)
 
-  # Installation
+  
+
+  ## Installation
+
+[express-handlebars](https://www.npmjs.com/package/express-handlebars) The application's folder structure follows the Model-View-Controller paradigm by using the handlebars package.
+```
+npm install express-handlebars
+```
+
+[MySQL2](https://www.npmjs.com/package/mysql2) 
+```
+npm install --save mysql2
+```
+
+[Sequelize](https://www.npmjs.com/package/sequelize) packages to connect to a MySQL database for your Models, and create an Express.js API for your Controllers.
+```
+npm i sequelize
+```
+
+[dotenv package](https://www.npmjs.com/package/dotenv) to use environment variables.
+```
+npm install dotenv --save
+```
+
+[bcrypt package](https://www.npmjs.com/package/bcrypt) to hash passwords.
+```
+npm install bcrypt
+```
+
+[express-session](https://www.npmjs.com/package/express-session) **Note**: The package stores the 
+session data on the client in a cookie. When you are idle on the site for more than a set time, the 
+cookie will expire and you will be required to log in again to start a new session. This is the 
+default behavior and you do not have to do anything to your application other than implement the npm
+package.
+```
+npm install express-session
+```
+
+[connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) packages to add authentication.
+```
+npm install connect-session-sequelize
+```
+
+## Deployed Heroku URL: 
+
+[Heroku]()
 
   Utilizes node and MySQL for database storage.
   NPM packeges used:
@@ -37,6 +85,70 @@ Project 2 - Team 8
 [mysql2 2.3.3](https://www.npmjs.com/package/mysql2)
 [sequelize 6.19.2](https://sequelize.org/docs/v6/getting-started/)
 [sql-template-strings 2.2.2](https://www.npmjs.com/package/sql-template-strings)
+
+## Additional Tools used:
+
+[SQL-Template-Strings] The SQL template string tag transforms the template            string and returns an object that is understood by both mysql and postgres.
+
+[Trello] - Kanban Board an agile methodology and a visual method for managing and processing work. (https://trello.com/en-US)
+
+[Formidable] A Node.js module for parsing form data, especially file uploads. 
+(https://formidable.com/)
+
+[SQL-Template-Strings] The SQL template string tag transforms the template            string and returns an object that is understood by both mysql and postgres.
+
+## Main Objective
+
+The application's front end has already been created. The task is to build the back end, connect the two, and then deploy the entire application to **Heroku**.
+
+[To install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
+
+Once Heroku has been installed, verify Heroku was installed on Terminal
+```
+heroku --version
+```
+Once Heroku is verified on Terminal, check your git is installed. 
+```
+git --version
+```
+
+[Heroku documentation on getting started with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true)
+
+To direct your project to your heroku account
+```
+heroku login or heroku login i
+cd ~/ PROJECT LOCATION
+heroku create
+```
+
+[To deploy a project on Heroku](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide)
+
+Create a variable to locate Port
+```
+const port = process.env.PORT || 3001
+```
+
+```Terminal
+git status
+git init
+heroku create
+git remote -v
+git add -A
+git commit -m "Pushing to Heroku"
+git push heroku main
+```
+
+To open the application from the terminal
+```
+heroku open
+```
+
+[Heroku documentation on creating a Heroku remote](https://devcenter.heroku.com/articles/git#creating-a-heroku-remote)
+To confirm there is a remote name heroku set on your app
+```
+git remote -v
+```
+2:33
 
   # Usage
 
