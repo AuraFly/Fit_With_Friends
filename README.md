@@ -74,7 +74,7 @@ npm install connect-session-sequelize
 
 ## Deployed Heroku URL:
 
-[Heroku]()
+[Heroku](https://fitwithfriends-app.herokuapp.com/)
 [GITHUB] (https://github.com/AuraFly/Fit_With_Friends.git)
 [GITHUB] (git@github.com:AuraFly/Fit_With_Friends.git)
 
